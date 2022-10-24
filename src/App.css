@@ -1,38 +1,292 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ----------slidebar------------------ */
+
+.container1 {
+  display: flex;
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  background: linear-gradient(115deg, #97f39d 10%, #299d33 90%);
+  /* background: linear-gradient(
+        to right,
+        rgba(163, 199, 214, 0) 0%,
+        rgba(80, 226, 97, 0.701) 44%,
+        rgba(12, 199, 40, 0.886) 100%
+      ); */
 }
 
-.App-header {
-  background-color: #282c34;
+.slidebar {
+  background-color: #000;
+  color: #fff;
   min-height: 100vh;
+  width: 300px;
+  transition: all 0.5s;
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.logo {
+  font-size: 30px;
+}
+
+.bars {
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.link {
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 25px;
+  transition: all 0.5s;
+}
+
+.link:hover {
+  background-color: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.icon,
+.link-text {
+  font-size: 20px;
+}
+
+/* ------------------ToDOList-------- */
+.header {
+  height: 200px;
+  font-weight: 600;
+  width: 100%;
+
+  padding-top: 50px;
+  text-align: center;
+
+}
+
+.btn-primary {
+  background-color: rgb(69, 205, 15);
+  padding: 10px;
+  font-weight: 600;
+  border-color: #63d182;
+}
+
+.mr15 {
+  margin-right: 10px;
+}
+
+.form-submit {
+  margin-top: 20px;
+  float: right;
+}
+/* .custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+} */
+
+.H1 {
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.task-holder {
+  width: 100%;
+  height: 98%;
+  padding: 10px 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
+}
+
+.task-container {
+  width: 100%;
+  min-height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d7f3dd;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+/*---------------timeline-------------------*/
+.vertical-timeline-element-content {
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+  padding: 2em 3em !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.h3 {
+  padding-top: 0.25em;
+}
+
+.date {
+  color: rgb(201, 251, 255);
+}
+
+.description {
+  margin: 1.5em 0 2em 0;
+  font-weight: 450;
+  color: rgb(67, 66, 66);
+}
+
+/* --------------Infomation-------------------- */
+
+.info-data {
+  display: flex; 
+  margin: 5px;
+}
+
+.info-input {
+  font-size: 15px;
+  font-weight: 5CR00;
+  color: #000;
+  min-width: 100px;
+}
+
+.card {
+  top:13%;
+  height: fit-content;
+  max-width: 400px;
+  margin: auto;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  transition: 0.3s;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.card-form {
+  margin:15px ;
+}
+
+
+.card-header {
+  height: 80px;
+  position: relative;
+  display: flex;
+  height: 200px;
+  flex-shrink: 0;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.card-cover {
+  height: 100px;
+  top: -50px;
+}
+
+.card-avatar {
+  transform: none;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+}
+
+.card-fullname,
+.card-jobtitle {
+  left: 86px;
+  transform: none;
+}
+
+.card-fullname {
+  bottom: 18px;
+  font-size: 20px;
+}
+
+.card-jobtitle {
+  bottom: 16px;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+.card-avatar {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-64px);
+}
+.card-fullname {
+  position: absolute;
+  bottom: 0;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(-10px) translateX(-50%);
+  left: 50%;
+}
+
+.card-jobtitle {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  white-space: nowrap;
+  font-weight: 500;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-7px);
+}
+
+.card-main {
+  position: relative;
+  flex: 1;
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+}
+
+.card-content {
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.card-subtitle {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 8px;
 }
